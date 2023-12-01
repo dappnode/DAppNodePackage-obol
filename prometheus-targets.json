@@ -1,0 +1,52 @@
+[
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "charon-validator-1.obol.dappnode"
+    },
+    "targets": [
+      "charon-validator-1.obol.dappnode:3620",
+      "charon-validator-1.obol.dappnode:8008"
+    ]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "charon-validator-2.obol.dappnode"
+    },
+    "targets": [
+      "charon-validator-2.obol.dappnode:3620",
+      "charon-validator-2.obol.dappnode:8008"
+    ]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "charon-validator-3.obol.dappnode"
+    },
+    "targets": [
+      "charon-validator-3.obol.dappnode:3620",
+      "charon-validator-3.obol.dappnode:8008"
+    ]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "charon-validator-4.obol.dappnode"
+    },
+    "targets": [
+      "charon-validator-4.obol.dappnode:3620",
+      "charon-validator-4.obol.dappnode:8008"
+    ]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "charon-validator-5.obol.dappnode"
+    },
+    "targets": [
+      "charon-validator-5.obol.dappnode:3620",
+      "charon-validator-5.obol.dappnode:8008"
+    ]
+  }
+]
