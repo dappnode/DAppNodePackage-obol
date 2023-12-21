@@ -10,7 +10,7 @@ The Obol Dappnode Package is designed to help users run a distributed validator 
 
 ## Getting the ENR
 
-3. **ENR for Clusters**: You will receive an ENR (Ethereum Name Record) for each cluster in the package. You can find these ENRs in the [Info tab](http://my.dappnode/#/packages/obol.dnp.dappnode.eth/info). These ENRs are needed to register each cluster as an operator before running the DKG (Distributed Key Generation) ceremony.
+3. **ENR for Clusters**: You will receive an ENR (Ethereum Name Record) for each cluster in the package. You can find these ENRs in the [Info tab](http://my.dappnode/packages/my/obol.dnp.dappnode.eth/info). These ENRs are needed to register each cluster as an operator before running the DKG (Distributed Key Generation) ceremony.
 
 4. **First Installation**: During the first installation, it's essential to leave all definition file inputs blank in the setup wizard. This allows you to obtain the ENR for each Charon node, which is necessary for the DKG process.
 
