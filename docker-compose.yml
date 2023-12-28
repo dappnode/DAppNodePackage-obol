@@ -3,10 +3,10 @@ services:
   charon-validator-1:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 1
     restart: on-failure
     volumes:
@@ -15,9 +15,10 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3411"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3431"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3711"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3731"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
+      - "CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/"
       - CHARON_LOKI_SERVICE=charon-validator-1
       - ENABLE_MEV_BOOST=false
       - CHARON_EXTRA_OPTS
@@ -26,8 +27,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3411:3411/tcp"
-      - "3431:3431/udp"
+      - "3711:3711/tcp"
+      - "3731:3731/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -35,10 +36,10 @@ services:
   charon-validator-2:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 2
     restart: on-failure
     volumes:
@@ -47,8 +48,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3412"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3432"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3712"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3732"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-2
       - ENABLE_MEV_BOOST=false
@@ -58,8 +59,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3412:3412/tcp"
-      - "3432:3432/udp"
+      - "3712:3712/tcp"
+      - "3732:3732/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -67,10 +68,10 @@ services:
   charon-validator-3:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 3
     restart: on-failure
     volumes:
@@ -79,8 +80,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3413"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3433"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3713"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3733"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-3
       - ENABLE_MEV_BOOST=false
@@ -90,8 +91,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3413:3413/tcp"
-      - "3433:3433/udp"
+      - "3713:3713/tcp"
+      - "3733:3733/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -99,10 +100,10 @@ services:
   charon-validator-4:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 4
     restart: on-failure
     volumes:
@@ -111,8 +112,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3414"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3434"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3714"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3734"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-4
       - ENABLE_MEV_BOOST=false
@@ -122,8 +123,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3414:3414/tcp"
-      - "3434:3434/udp"
+      - "3714:3714/tcp"
+      - "3734:3734/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -131,10 +132,10 @@ services:
   charon-validator-5:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 5
     restart: on-failure
     volumes:
@@ -143,8 +144,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3415"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3435"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3715"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3735"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-5
       - ENABLE_MEV_BOOST=false
@@ -154,12 +155,22 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3415:3415/tcp"
-      - "3435:3435/udp"
+      - "3715:3715/tcp"
+      - "3735:3735/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
       - "seccomp:unconfined"
+
+# For Lido
+#prometheus:
+#  build:
+#    context: prometheus
+#    args:
+#      PROMETHEUS_VERSION: v2.46.0
+#  volumes:
+#    - "prometheus-data:/prometheus"
+#  restart: unless-stopped
 volumes:
   charon-1-data: {}
   charon-2-data: {}
@@ -171,3 +182,4 @@ volumes:
   validator-3-data: {}
   validator-4-data: {}
   validator-5-data: {}
+#prometheus-data: {}

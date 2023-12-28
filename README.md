@@ -1,4 +1,4 @@
-# Obol distributed validator package for Mainnet network
+# Obol distributed validator package for Ethereum mainnet
 
 This package includes 5 services "cluster-validator". Each one can take part in an Obol cluster.
 
