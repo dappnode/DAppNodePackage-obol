@@ -15,8 +15,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3711"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3731"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3411"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3431"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - "CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/"
       - CHARON_LOKI_SERVICE=charon-validator-1
@@ -27,8 +27,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3711:3711/tcp"
-      - "3731:3731/udp"
+      - "3411:3411/tcp"
+      - "3431:3431/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -48,8 +48,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3712"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3732"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3412"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3432"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-2
       - ENABLE_MEV_BOOST=false
@@ -59,8 +59,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3712:3712/tcp"
-      - "3732:3732/udp"
+      - "3412:3412/tcp"
+      - "3432:3432/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -80,8 +80,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3713"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3733"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3413"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3433"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-3
       - ENABLE_MEV_BOOST=false
@@ -91,8 +91,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3713:3713/tcp"
-      - "3733:3733/udp"
+      - "3413:3413/tcp"
+      - "3433:3433/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -112,8 +112,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3714"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3734"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3414"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3434"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-4
       - ENABLE_MEV_BOOST=false
@@ -123,8 +123,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3714:3714/tcp"
-      - "3734:3734/udp"
+      - "3414:3414/tcp"
+      - "3434:3434/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
@@ -144,8 +144,8 @@ services:
     environment:
       - DEFINITION_FILE_URL
       - CHARON_LOG_LEVEL=info
-      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3715"
-      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3735"
+      - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3415"
+      - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3435"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
       - CHARON_LOKI_SERVICE=charon-validator-5
       - ENABLE_MEV_BOOST=false
@@ -155,8 +155,8 @@ services:
       - JAVA_OPTS=-Xmx5g
       - VALIDATOR_EXTRA_OPTS
     ports:
-      - "3715:3715/tcp"
-      - "3735:3735/udp"
+      - "3415:3415/tcp"
+      - "3435:3435/udp"
     healthcheck:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
