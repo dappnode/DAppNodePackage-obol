@@ -3,10 +3,10 @@ services:
   charon-validator-1:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 1
     restart: on-failure
     volumes:
@@ -18,6 +18,7 @@ services:
       - "CHARON_P2P_TCP_ADDRESS=0.0.0.0:3411"
       - "CHARON_P2P_UDP_ADDRESS=0.0.0.0:3431"
       - "CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push"
+      - "CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/"
       - CHARON_LOKI_SERVICE=charon-validator-1
       - ENABLE_MEV_BOOST=false
       - CHARON_EXTRA_OPTS
@@ -35,10 +36,10 @@ services:
   charon-validator-2:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 2
     restart: on-failure
     volumes:
@@ -67,10 +68,10 @@ services:
   charon-validator-3:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 3
     restart: on-failure
     volumes:
@@ -99,10 +100,10 @@ services:
   charon-validator-4:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 4
     restart: on-failure
     volumes:
@@ -131,10 +132,10 @@ services:
   charon-validator-5:
     build:
       context: charon-validator
-      dockerfile: Dockerfile.teku
+      dockerfile: Dockerfile.lodestar
       args:
         UPSTREAM_VERSION: v0.18.0
-        VALIDATOR_CLIENT_VERSION: 23.11.0
+        VALIDATOR_CLIENT_VERSION: v1.13.0
         CLUSTER_ID: 5
     restart: on-failure
     volumes:
@@ -160,6 +161,16 @@ services:
       test: "wget -qO- http://localhost:3620/readyz"
     security_opt:
       - "seccomp:unconfined"
+
+# For Lido
+#prometheus:
+#  build:
+#    context: prometheus
+#    args:
+#      PROMETHEUS_VERSION: v2.46.0
+#  volumes:
+#    - "prometheus-data:/prometheus"
+#  restart: unless-stopped
 volumes:
   charon-1-data: {}
   charon-2-data: {}
@@ -171,3 +182,4 @@ volumes:
   validator-3-data: {}
   validator-4-data: {}
   validator-5-data: {}
+#prometheus-data: {}
