@@ -4,8 +4,12 @@ FROM node:20-bullseye-slim as lodestar-build
 
 WORKDIR /usr/app
 
-RUN apt update && apt install -y git g++ make python3 && \
-    ln -s /usr/bin/python3 /usr/bin/python
+RUN apt update && apt install -y git g++ make python3
+
+# From https://askubuntu.com/questions/1296790/python-is-python3-package-in-ubuntu-20-04-what-is-it-and-what-does-it-actually
+# Unified way to create reliable symlink across distros
+# Only arm arch for NodeJS version >= 18 need this link. Older versions don't have `python-is-python3`
+RUN apt install python-is-python3 || echo "Ignore errors"
 
 RUN git clone https://github.com/ChainSafe/lodestar
 
