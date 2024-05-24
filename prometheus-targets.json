@@ -2,15 +2,57 @@
   {
     "labels": {
       "package": "obol.dnp.dappnode.eth",
-      "service": "charon-validator-1.obol.dappnode"
+      "service": "cluster-1.obol.dappnode"
     },
-    "targets": ["charon-validator-1.obol.dappnode:3620"]
+    "targets": ["cluster-1.obol.dappnode:3620"]
   },
   {
     "labels": {
       "package": "obol.dnp.dappnode.eth",
-      "service": "charon-validator-1.obol.dappnode"
+      "service": "cluster-1.obol.dappnode"
     },
-    "targets": ["charon-validator-1.obol.dappnode:8008"]
+    "targets": ["cluster-1.obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "cluster-2.obol.dappnode"
+    },
+    "targets": ["cluster-2.obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "cluster-2.obol.dappnode"
+    },
+    "targets": ["cluster-2.obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "cluster-3.obol.dappnode"
+    },
+    "targets": ["cluster-3.obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "cluster-3.obol.dappnode"
+    },
+    "targets": ["cluster-3.obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "cluster-4.obol.dappnode"
+    },
+    "targets": ["cluster-4.obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "obol.dnp.dappnode.eth",
+      "service": "cluster-5.obol.dappnode"
+    },
+    "targets": ["cluster-5.obol.dappnode:8008"]
   }
 ]
