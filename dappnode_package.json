@@ -9,7 +9,7 @@
     },
     {
       "repo": "ChainSafe/lodestar",
-      "version": "v1.18.0",
+      "version": "v1.18.1",
       "arg": "VALIDATOR_CLIENT_VERSION"
     }
   ],
