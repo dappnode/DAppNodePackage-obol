@@ -4,12 +4,12 @@
   "upstream": [
     {
       "repo": "ObolNetwork/charon",
-      "version": "v0.19.2",
+      "version": "v1.0.0-rc4",
       "arg": "CHARON_VERSION"
     },
     {
       "repo": "ChainSafe/lodestar",
-      "version": "v1.18.1",
+      "version": "v1.19.0",
       "arg": "VALIDATOR_CLIENT_VERSION"
     }
   ],
