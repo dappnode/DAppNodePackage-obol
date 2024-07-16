@@ -5,8 +5,8 @@ services:
       context: charon-validator
       dockerfile: Dockerfile.lodestar
       args:
-        CHARON_VERSION: v1.0.0
-        VALIDATOR_CLIENT_VERSION: v1.19.0
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.1
         CLUSTER_ID: 1
     restart: on-failure
     volumes:
@@ -41,8 +41,8 @@ services:
       context: charon-validator
       dockerfile: Dockerfile.lodestar
       args:
-        CHARON_VERSION: v1.0.0
-        VALIDATOR_CLIENT_VERSION: v1.19.0
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.1
         CLUSTER_ID: 2
     restart: on-failure
     volumes:
@@ -77,8 +77,8 @@ services:
       context: charon-validator
       dockerfile: Dockerfile.lodestar
       args:
-        CHARON_VERSION: v1.0.0
-        VALIDATOR_CLIENT_VERSION: v1.19.0
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.1
         CLUSTER_ID: 3
     restart: on-failure
     volumes:
@@ -113,8 +113,8 @@ services:
       context: charon-validator
       dockerfile: Dockerfile.lodestar
       args:
-        CHARON_VERSION: v1.0.0
-        VALIDATOR_CLIENT_VERSION: v1.19.0
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.1
         CLUSTER_ID: 4
     restart: on-failure
     volumes:
@@ -149,8 +149,8 @@ services:
       context: charon-validator
       dockerfile: Dockerfile.lodestar
       args:
-        CHARON_VERSION: v1.0.0
-        VALIDATOR_CLIENT_VERSION: v1.19.0
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.1
         CLUSTER_ID: 5
     restart: on-failure
     volumes:
